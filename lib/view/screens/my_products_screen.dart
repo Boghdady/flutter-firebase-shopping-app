@@ -28,20 +28,17 @@ class MyProductsScreen extends StatelessWidget {
           )),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 65,
-              child: RaisedButton(
-                color: Theme.of(context).accentColor,
+            child: FloatingActionButton(
+                // color: Theme.of(context).accentColor,
                 onPressed: () {
                   // Go to add product
                   Navigator.of(context)
                       .pushNamed(addEditProductScreenRoute, arguments: 'add');
                 },
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
+                  padding: const EdgeInsets.only(bottom: 5.0),
                   child: Text(
-                    "Add Product",
+                    "Add",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,
@@ -52,7 +49,6 @@ class MyProductsScreen extends StatelessWidget {
                 ),
               ),
             ),
-          ),
         ],
       ),
     );
